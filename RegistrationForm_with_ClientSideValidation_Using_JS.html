@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Registration Form</h2>
+
+Name: <input type="text" id="name"><br><br>
+Email: <input type="text" id="email"><br><br>
+Password: <input type="password" id="pass"><br><br>
+
+<button onclick="validate()">Register</button>
+
+<script>
+function validate() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var pass = document.getElementById("pass").value;
+
+    if (name == "")
+        alert("Name is required");
+
+    else if (email == "")
+        alert("Email is required");
+
+    else if (!email.includes("@gmail.com"))
+        alert("Enter a valid Gmail address");
+
+    else if (pass == "")
+        alert("Password is required");
+
+    else if (pass.length < 8)
+        alert("Password must be at least 8 characters");
+
+    else
+        alert("Registration Successful");
+}
+</script>
+
+</body>
+</html>
